@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <meta name="description" content="Official Zuko SA homepage with latest music, biography, videos and bookings information." />
+    <link rel="icon" href="images/zuk.png" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="Hero">
-      <div class="nav-bar"> 
+      <nav class="nav-bar" aria-label="Primary navigation">
         <div class="left">
-            <p class="btns">Home</p>
-            <p class="btns"><a href="music.html" target="_self">Music</a></p>
-            <p class="btns"><a href="biography.html" target="_self">Biography</a></p>
+            <a href="index.html" class="btns" aria-current="page">Home</a>
+            <a href="music.html" class="btns">Music</a>
+            <a href="biography.html" class="btns">Biography</a>
         </div>
         <div class="right">
-            <p class="btns"><a href="videos.html" target="_self">Videos</a></p>
-            <p class="btns"><a href="blog.html" target="_self">Blog</a></p>
-            <p class="btns"><a href="bookings.html" target="_self">Bookings</a></p>
+            <a href="videos.html" class="btns">Videos</a>
+            <a href="blog.html" class="btns">Blog</a>
+            <a href="bookings.html" class="btns">Bookings</a>
         </div>
-      </div>
-      <div class="topic">
+      </nav>
+      <main id="main" class="topic">
         <h3>Zuko SA to thank his supporters with more hits - Daily Sun</h3>
-        <h1 class="#">Zuko SA</h1>
-        <p class="#">Welcome to Zuko SA's website</p>
-      </div>
+        <h1>Zuko SA</h1>
+        <p>Welcome to Zuko SA's website</p>
+      </main>
     </section>
 </body>
 </html>
