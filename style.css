@@ -85,6 +85,8 @@ body::before {
    
 }
 
+
+
    
 
 
@@ -123,7 +125,10 @@ body::before {
 
 
 
-.music {
+.music,
+.bio,
+.videos,
+.bookings {
   background-image: url('./images/mus.png'); /* replace with your image */
   background-size: cover;
   background-position: center;
