@@ -69,7 +69,8 @@ a:focus-visible {
 .music,
 .bio,
 .videos,
-.bookings {
+.bookings,
+.blog {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -87,7 +88,8 @@ a:focus-visible {
 .music,
 .bio,
 .videos,
-.bookings {
+.bookings,
+.blog {
   background-image: url('./images/mus.png');
 }
 
@@ -146,6 +148,8 @@ a:focus-visible {
   transform: translateY(-1px);
   border-color: rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 
@@ -173,7 +177,14 @@ a:focus-visible {
   color: #25D366;
 }
 
-
+.bookings {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 
@@ -237,5 +248,94 @@ a:focus-visible {
 
   .btns {
     width: 100%;
+  }
+}
+
+/* Footer Styles */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1.5em;
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #fdfdfd;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-text p {
+  margin: 0;
+  font-size: 0.95em;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.footer-text p:first-child {
+  color: var(--text);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 30px 16px;
+    margin-top: 30px;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+
+  .footer-socials {
+    gap: 16px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3em;
+  }
+
+  .footer-text p {
+    font-size: 0.9em;
   }
 }
