@@ -8,114 +8,10 @@
   --accent: #f7f7f7;
 }
 
-/* Vusi Nova theme variables (applies when `vusi` class is on <html> or <body>) */
-.vusi {
-  --bg: linear-gradient(180deg, #001021 0%, #00243a 100%);
-  --surface: rgba(0, 20, 40, 0.6);
-  --surface-strong: rgba(0, 12, 25, 0.9);
-  --border: rgba(173, 216, 230, 0.12);
-  --text: #eaf6ff;
-  --muted: #bcd7ea;
-  --accent: #4fc3f7;
-  --bg-image-1: url('images/vusi1.jpg');
-  --bg-image-2: url('images/vusi2.jpg');
-  --bg-image-3: url('images/vusi3.jpg');
-}
-
 * {
   box-sizing: border-box;
 }
 
-/* Site-wide slideshow layers */
-.Hero .slideshow,
-.music .slideshow,
-.bio .slideshow,
-.videos .slideshow,
-.blog .slideshow,
-.bookings .slideshow {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.Hero .slideshow .slide,
-.music .slideshow .slide,
-.bio .slideshow .slide,
-.videos .slideshow .slide,
-.blog .slideshow .slide,
-.bookings .slideshow .slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transform: translateZ(0);
-  animation: vusi-fade 18s linear infinite;
-}
-
-.Hero .slideshow .slide:nth-child(1),
-.music .slideshow .slide:nth-child(1),
-.bio .slideshow .slide:nth-child(1),
-.videos .slideshow .slide:nth-child(1),
-.blog .slideshow .slide:nth-child(1),
-.bookings .slideshow .slide:nth-child(1) { background-image: var(--bg-image-1); animation-delay: 0s; }
-
-.Hero .slideshow .slide:nth-child(2),
-.music .slideshow .slide:nth-child(2),
-.bio .slideshow .slide:nth-child(2),
-.videos .slideshow .slide:nth-child(2),
-.blog .slideshow .slide:nth-child(2),
-.bookings .slideshow .slide:nth-child(2) { background-image: var(--bg-image-2); animation-delay: 6s; }
-
-.Hero .slideshow .slide:nth-child(3),
-.music .slideshow .slide:nth-child(3),
-.bio .slideshow .slide:nth-child(3),
-.videos .slideshow .slide:nth-child(3),
-.blog .slideshow .slide:nth-child(3),
-.bookings .slideshow .slide:nth-child(3) { background-image: var(--bg-image-3); animation-delay: 12s; }
-
-@keyframes vusi-fade {
-  0% { opacity: 0; }
-  5% { opacity: 1; }
-  30% { opacity: 1; }
-  35% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* Ensure content sits above slideshow on all pages */
-.Hero .nav-bar,
-.Hero .topic,
-.Hero .footer,
-.music h2,
-.music h3,
-.music h4,
-.music .container,
-.music .footer-socials,
-.music .footer,
-.bio h2,
-.bio h3,
-.bio p,
-.bio img,
-.bio .footer,
-.videos h2,
-.videos .container,
-.videos .footer,
-.blog h2,
-.blog p,
-.blog .container,
-.blog .footer,
-.bookings h2,
-.bookings p,
-.bookings .bttns,
-.bookings .topic,
-.bookings .footer {
-  position: relative;
-  z-index: 2;
-}
-
-/* Make other pages use the first image as background when vusi theme active */
-.vusi body { background-image: var(--bg-image-1); background-size: cover; background-position: center; background-repeat: no-repeat; }
 html {
   scroll-behavior: smooth;
 }
@@ -186,7 +82,7 @@ a:focus-visible {
 }
 
 .Hero {
-  background-image: url('./images/frontz.png');
+  background-image: url('./images/zuk.png');
 }
 
 .music,
@@ -194,7 +90,7 @@ a:focus-visible {
 .videos,
 .bookings,
 .blog {
-  background-image: url('./images/frontz.png');
+  background-image: url('./images/mus.png');
 }
 
 .nav-bar {
@@ -255,18 +151,6 @@ a:focus-visible {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.3);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-
-/* Theme toggle button */
-.theme-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text);
-  padding: 8px 12px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.theme-toggle:hover { box-shadow: 0 0 18px rgba(255,255,255,0.25); }
 
 
 
@@ -454,28 +338,4 @@ a:focus-visible {
   .footer-text p {
     font-size: 0.9em;
   }
-}
-
-
-
-
-.Hero {
-  background-image: url('./images/frontz.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
-}
-
-.Hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65); /* darker overlay */
-  z-index: 0;
-}
-
-.Hero > * {
-  position: relative;
-  z-index: 1;
 }
